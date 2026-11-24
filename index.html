@@ -1,0 +1,675 @@
+<!DOCTYPE html><html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Untuk Ibu Eni Sulistiyani 💐</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+font-family:Arial,sans-serif;
+color:#fff;
+background:#08000f;
+overflow-x:hidden;
+}
+
+/* AURORA BACKGROUND */
+body:before,body:after{
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+border-radius:50%;
+filter:blur(100px);
+opacity:.35;
+pointer-events:none;
+z-index:-2;
+}
+
+body:before{
+background:#a52cff;
+top:-200px;
+left:-150px;
+animation:aurora 8s infinite alternate;
+}
+
+body:after{
+background:#ff2995;
+right:-200px;
+bottom:-200px;
+animation:aurora 10s infinite alternate-reverse;
+}
+
+@keyframes aurora{
+from{transform:translate(0,0) scale(1)}
+to{transform:translate(100px,80px) scale(1.3)}
+}
+
+/* OPENING */
+#opening{
+position:fixed;
+inset:0;
+z-index:99999;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:20px;
+background:
+radial-gradient(circle,#7d2cff55,transparent 35%),
+linear-gradient(135deg,#050008,#160021,#08000f);
+transition:.9s;
+}
+
+.openbox{
+width:min(520px,100%);
+padding:45px 25px;
+text-align:center;
+border:1px solid #ffffff25;
+border-radius:35px;
+background:#ffffff0b;
+backdrop-filter:blur(25px);
+box-shadow:0 0 80px #a52cff33;
+}
+
+.openflower{
+font-size:70px;
+animation:bounce 2s infinite;
+}
+
+.openbox h1{
+font-size:clamp(32px,9vw,55px);
+margin:15px 0 10px;
+background:linear-gradient(90deg,#fff,#ff9fd5,#c9a2ff,#fff);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.openbox p{
+color:#ddd;
+line-height:1.7;
+}
+
+.openbtn{
+margin-top:28px;
+padding:17px 32px;
+border:0;
+border-radius:999px;
+color:#fff;
+font-weight:bold;
+font-size:16px;
+background:linear-gradient(100deg,#8c35ff,#ff3195);
+box-shadow:0 0 30px #d83dff66;
+cursor:pointer;
+position:relative;
+z-index:100000;
+touch-action:manipulation;
+-webkit-tap-highlight-color:transparent;
+}
+
+.openbtn:active,.secretbtn:active{
+transform:scale(.92);
+}
+
+/* MAIN */
+main{
+width:min(900px,92%);
+margin:auto;
+padding:60px 0;
+}
+
+.hero{
+min-height:75vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.tag{
+padding:9px 17px;
+border:1px solid #ffffff25;
+border-radius:50px;
+background:#ffffff0b;
+color:#ffb5db;
+font-size:12px;
+letter-spacing:3px;
+}
+
+.hero h2{
+font-size:clamp(40px,10vw,78px);
+line-height:1;
+margin:25px 0 20px;
+background:linear-gradient(90deg,#fff,#ffabd8,#c79cff,#fff);
+-webkit-background-clip:text;
+color:transparent;
+animation:glow 3s infinite alternate;
+}
+
+.hero p{
+max-width:680px;
+color:#d8cfdf;
+line-height:1.8;
+}
+
+@keyframes glow{
+from{filter:drop-shadow(0 0 5px #ff5cae)}
+to{filter:drop-shadow(0 0 25px #a15cff)}
+}
+
+.card{
+margin:30px 0;
+padding:30px;
+border-radius:30px;
+background:#ffffff0b;
+border:1px solid #ffffff18;
+backdrop-filter:blur(18px);
+box-shadow:0 25px 80px #0008;
+}
+
+.card h3{
+color:#ffafd8;
+font-size:25px;
+margin-bottom:20px;
+}
+
+.letter{
+color:#e8e0eb;
+line-height:1.9;
+font-size:16px;
+}
+
+.letter p{margin-bottom:17px}
+
+.quote{
+margin:35px 0;
+padding:35px 20px;
+text-align:center;
+border-radius:30px;
+background:linear-gradient(135deg,#a32cff18,#ff309518);
+border:1px solid #ffffff18;
+}
+
+.quote span{
+font-size:21px;
+line-height:1.7;
+color:#ffd0e7;
+}
+
+/* SECRET */
+.secret{
+margin-top:60px;
+text-align:center;
+padding:45px 20px;
+}
+
+.secret h3{
+font-size:30px;
+margin-bottom:12px;
+}
+
+.secret>p{
+color:#cfc5d8;
+}
+
+.secretbtn{
+margin-top:28px;
+padding:17px 28px;
+border:1px solid #ff9fd2;
+border-radius:999px;
+background:linear-gradient(100deg,#ff318e,#933cff);
+color:white;
+font-weight:bold;
+font-size:15px;
+cursor:pointer;
+box-shadow:0 0 40px #ff3c9a55;
+touch-action:manipulation;
+-webkit-tap-highlight-color:transparent;
+position:relative;
+z-index:10;
+}
+
+#secretMessage{
+display:none;
+margin-top:35px;
+padding:30px 22px;
+border-radius:30px;
+background:#ffffff0b;
+border:1px solid #ff9bd633;
+box-shadow:0 0 60px #d02cff22;
+animation:messageIn .8s ease;
+}
+
+#secretMessage h4{
+font-size:29px;
+color:#ffb5dc;
+margin-bottom:15px;
+}
+
+#secretMessage p{
+color:#eee;
+line-height:1.9;
+}
+
+@keyframes messageIn{
+from{opacity:0;transform:translateY(30px) scale(.95)}
+to{opacity:1;transform:none}
+}
+
+/* SIGNATURE */
+.signature{
+text-align:center;
+padding:60px 10px;
+color:#d6cbdc;
+}
+
+.signature strong{
+display:block;
+margin-top:12px;
+font-size:25px;
+color:#ffb3da;
+}
+
+/* FLOWER EXPLOSION */
+#effects{
+position:fixed;
+inset:0;
+pointer-events:none;
+z-index:100000;
+overflow:hidden;
+}
+
+.flower{
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+animation:explode 2.2s cubic-bezier(.12,.75,.2,1) forwards;
+will-change:transform,opacity;
+filter:drop-shadow(0 0 10px #ff8dca);
+}
+
+@keyframes explode{
+0%{
+opacity:1;
+transform:translate(-50%,-50%) scale(.1) rotate(0);
+}
+70%{opacity:1}
+100%{
+opacity:0;
+transform:
+translate(
+calc(-50% + var(--x)),
+calc(-50% + var(--y))
+)
+scale(var(--s))
+rotate(var(--r));
+}
+}
+
+/* PETALS */
+.petal{
+position:absolute;
+top:-50px;
+animation:fall linear forwards;
+filter:drop-shadow(0 0 7px #ff8dc8);
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-50px) rotate(0);
+opacity:0;
+}
+10%{opacity:1}
+100%{
+transform:
+translate(var(--drift),110vh)
+rotate(800deg);
+opacity:0;
+}
+}
+
+/* LIGHT FLASH */
+.flash{
+position:absolute;
+left:50%;
+top:50%;
+width:30px;
+height:30px;
+border-radius:50%;
+background:#fff;
+box-shadow:
+0 0 30px #fff,
+0 0 80px #ff70c2,
+0 0 160px #a35cff;
+animation:flash .7s forwards;
+}
+
+@keyframes flash{
+to{
+opacity:0;
+transform:scale(12);
+}
+}
+
+/* RING */
+.ring{
+position:absolute;
+left:50%;
+top:50%;
+width:30px;
+height:30px;
+border:3px solid #ffb8df;
+border-radius:50%;
+animation:ring 1.2s forwards;
+}
+
+@keyframes ring{
+to{
+opacity:0;
+transform:translate(-50%,-50%) scale(18);
+}
+}
+
+/* SPARK */
+.spark{
+position:absolute;
+left:50%;
+top:50%;
+font-size:20px;
+animation:spark 1.4s forwards;
+}
+
+@keyframes spark{
+to{
+opacity:0;
+transform:
+translate(var(--x),var(--y))
+rotate(500deg)
+scale(0);
+}
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+main{width:92%;padding:35px 0}
+.card{padding:24px 18px}
+.hero{min-height:78vh}
+.letter{font-size:15px}
+}
+</style></head><body><!-- OPENING --><div id="opening">
+<div class="openbox"><div class="openflower">🌷</div><h1>Untuk Ibu Eni</h1><p>
+Ada sebuah pesan spesial dari Jasmine
+yang dibuat khusus untuk Ibu.
+</p><button class="openbtn" onclick="openLetter()">
+✨ BUKA UCAPAN ✨
+</button></div>
+</div><!-- EFFECT LAYER --><div id="effects"></div><main><section class="hero"><div class="tag">
+HARI GURU NASIONAL • 2026
+</div><h2>
+Selamat Hari Guru<br>
+Ibu Eni Sulistiyani 🌷
+</h2><p>
+Untuk seorang guru yang tidak hanya mengajarkan
+ilmu, tetapi juga memberikan inspirasi,
+kesabaran, dan semangat kepada murid-muridnya.
+</p></section><section class="card"><h3>💌 Surat Kecil dari Jasmine</h3><div class="letter"><p>Untuk Ibu Eni Sulistiyani yang Jasmine hormati,</p><p>
+Selamat Hari Guru, Bu. Hari ini Jasmine ingin
+mengucapkan sesuatu yang mungkin sederhana,
+tetapi benar-benar datang dari hati.
+</p><p>
+Terima kasih karena Ibu sudah sabar mengajarkan,
+membimbing, mengingatkan, dan menemani kami
+dalam perjalanan belajar.
+</p><p>
+Tidak semua perjuangan seorang guru terlihat.
+Ada banyak waktu, tenaga, pikiran, dan kesabaran
+yang diberikan tanpa kami sadari.
+Karena itu Jasmine ingin mengatakan:
+terima kasih untuk semuanya, Bu.
+</p><p>
+Mungkin suatu saat kami akan lupa beberapa
+pelajaran yang pernah diajarkan. Tetapi kami
+tidak akan mudah lupa kepada guru yang pernah
+memberikan nasihat, perhatian, dan semangat.
+</p><p>
+Semoga Ibu selalu diberikan kesehatan,
+kebahagiaan, kesabaran, dan kekuatan.
+Semoga setiap kebaikan yang Ibu berikan
+kepada murid-murid Ibu kembali kepada Ibu
+dalam bentuk kebahagiaan yang jauh lebih besar.
+</p><p>
+Jasmine sangat bersyukur pernah mendapatkan
+kesempatan untuk belajar dari Ibu.
+</p><p>
+Terima kasih sudah menjadi guru yang luar biasa.
+Selamat Hari Guru, Ibu Eni. ❤️
+</p></div>
+</section><section class="quote">
+<span>
+“Seorang guru mungkin mengajar hanya beberapa tahun,
+tetapi ilmu dan kebaikannya dapat tinggal
+di hati murid sepanjang hidup.” 🌷
+</span>
+</section><section class="secret"><h3>🌸 Masih Ada Satu Kejutan...</h3><p>
+Tekan tombol di bawah ini untuk membuka
+pesan rahasia dari Jasmine.
+</p><button class="secretbtn" onclick="showSecret()">
+💗 BUKA PESAN RAHASIA 💗
+</button><div id="secretMessage"><h4>🌷 Untuk Ibu Eni 🌷</h4><p>Bu Eni, kalau ucapan terima kasih bisa berubah
+menjadi bunga, mungkin halaman ini sudah penuh
+dengan bunga untuk Ibu.
+<br><br>
+
+Terima kasih sudah mengajar dengan hati.
+Terima kasih sudah sabar.
+Terima kasih sudah membimbing kami.
+<br><br>
+
+Semoga setiap hari Ibu dipenuhi kebahagiaan,
+senyuman, kesehatan, dan hal-hal baik.
+<br><br>
+
+Jangan pernah ragu bahwa kebaikan Ibu
+berarti bagi murid-murid Ibu.
+<br><br>
+
+<strong>
+🌸 Selamat Hari Guru, Ibu Eni! 🌸
+</strong></p></div></section><section class="signature">Dengan penuh rasa hormat dan terima kasih,
+
+<strong>Jasmine Stifanyy 💕</strong>
+
+</section></main><script>
+
+/* OPENING */
+function openLetter(){
+
+const opening=document.getElementById("opening");
+
+opening.style.opacity="0";
+opening.style.transform="scale(1.08)";
+opening.style.pointerEvents="none";
+
+setTimeout(()=>{
+opening.style.display="none";
+},900);
+
+}
+
+
+/* SECRET */
+function showSecret(){
+
+const msg=document.getElementById("secretMessage");
+
+msg.style.display="block";
+
+explodeFlowers();
+createPetals();
+createSparks();
+
+setTimeout(()=>{
+msg.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+},250);
+
+}
+
+
+/* FLOWER EXPLOSION */
+function explodeFlowers(){
+
+const layer=document.getElementById("effects");
+
+const flash=document.createElement("div");
+flash.className="flash";
+layer.appendChild(flash);
+
+setTimeout(()=>flash.remove(),800);
+
+const ring=document.createElement("div");
+ring.className="ring";
+layer.appendChild(ring);
+
+setTimeout(()=>ring.remove(),1300);
+
+const flowers=[
+"🌸","🌷","🌺","🌹","🌼",
+"🌻","💮","🏵️","🌸","🌷"
+];
+
+for(let i=0;i<120;i++){
+
+const f=document.createElement("div");
+
+f.className="flower";
+f.textContent=flowers[
+Math.floor(Math.random()*flowers.length)
+];
+
+const angle=Math.random()*Math.PI*2;
+
+const distance=180+Math.random()*750;
+
+const x=Math.cos(angle)*distance;
+const y=Math.sin(angle)*distance;
+
+f.style.setProperty("--x",x+"px");
+f.style.setProperty("--y",y+"px");
+f.style.setProperty(
+"--s",
+(.5+Math.random()*1.5)
+);
+f.style.setProperty(
+"--r",
+(Math.random()*1000-500)+"deg"
+);
+
+f.style.fontSize=
+(18+Math.random()*28)+"px";
+
+f.style.animationDelay=
+(Math.random()*.25)+"s";
+
+layer.appendChild(f);
+
+setTimeout(()=>f.remove(),2800);
+
+}
+
+}
+
+
+/* FALLING PETALS */
+function createPetals(){
+
+const layer=document.getElementById("effects");
+
+const petals=[
+"🌸","🌷","🌺","🌹","🌼","💮"
+];
+
+for(let i=0;i<55;i++){
+
+const p=document.createElement("div");
+
+p.className="petal";
+
+p.textContent=
+petals[Math.floor(Math.random()*petals.length)];
+
+p.style.left=
+Math.random()*100+"vw";
+
+p.style.fontSize=
+(18+Math.random()*25)+"px";
+
+p.style.setProperty(
+"--drift",
+(Math.random()*300-150)+"px"
+);
+
+p.style.animationDuration=
+(3+Math.random()*4)+"s";
+
+p.style.animationDelay=
+(Math.random()*1.5)+"s";
+
+layer.appendChild(p);
+
+setTimeout(()=>p.remove(),8000);
+
+}
+
+}
+
+
+/* SPARKS */
+function createSparks(){
+
+const layer=document.getElementById("effects");
+
+const symbols=[
+"✦","✧","✨","★","💖","•"
+];
+
+for(let i=0;i<60;i++){
+
+const s=document.createElement("div");
+
+s.className="spark";
+
+s.textContent=
+symbols[Math.floor(Math.random()*symbols.length)];
+
+const angle=Math.random()*Math.PI*2;
+
+const distance=150+Math.random()*650;
+
+s.style.setProperty(
+"--x",
+Math.cos(angle)*distance+"px"
+);
+
+s.style.setProperty(
+"--y",
+Math.sin(angle)*distance+"px"
+);
+
+s.style.animationDelay=
+(Math.random()*.3)+"s";
+
+layer.appendChild(s);
+
+setTimeout(()=>s.remove(),2000);
+
+}
+
+}
+
+</script></body>
+</html>
